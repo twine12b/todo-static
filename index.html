@@ -6,52 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do Application</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- load MUI -->
+    <link href="https://cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="mui-container">
     <header>
-        <h1>To Do!</h1>
-        <label for="add-task-input" class="visuallyhidden">add new todo task:</label>
-        <input id="add-task-input"></input>
-        <button>Add</button>
+        <h1 class="mui--text-center">To Do!</h1>
+        <div class="mui-row add-task__actions">
+            <label for="add-task-input" class="visuallyhidden">add new todo task:</label>
+            <input id="add-task-input" class="mui-col-xs-12 mui-col-md-9 add-task__input-field"></input>
+            <button class="mui-btn mui-btn--raised btn mui-col-xs-12 mui-col-md-3">Add</button>
+        </div>
+        <p class="mui--text-center">You have 3 tasks left to complete</p>
     </header>
-    <main>
-        <p>You have 3 tasks left to complete</p>
-        <section>
+    <main class="mui-row">
+
+        <section class="mui-col-xs-12 mui-col-md-6">
             <h2>Tasks todo</h2>
-            <ul>
-                <li>
-                    <p>This is a task that needs to be done.</p>
-                    <button>Complete</button>
-                    <button>Delete</button>
+            <ul class="mui-list--unstyled">
+                <li class="task">
+                    <p class="task__text">This is a task that needs to be done.</p>
+                    <button class="mui-btn mui-btn--raised btn">Complete</button>
+                    <button class="mui-btn mui-btn--raised btn">Delete</button>
                 </li>
-                <li>
-                    <p>This is a task that needs to be done.</p>
-                    <button>Complete</button>
-                    <button>Delete</button>
+                <li class="task">
+                    <p class="task__text">This is a task that needs to be done.</p>
+                    <button class="mui-btn mui-btn--raised btn">Complete</button>
+                    <button class="mui-btn mui-btn--raised btn">Delete</button>
                 </li>
-                <li>
-                    <p>This is a task that needs to be done.</p>
-                    <button>Complete</button>
-                    <button>Delete</button>
+                <li class="task">
+                    <p class="task__text">This is a task that needs to be done.</p>
+                    <button class="mui-btn mui-btn--raised btn">Complete</button>
+                    <button class="mui-btn mui-btn--raised btn">Delete</button>
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="mui-col-xs-12 mui-col-md-6">
             <h2>Complete tasks</h2>
-            <ul>
-                <li>
-                    <p>This is a task that needs to be done.</p>
-                    <button>Delete</button>
+            <ul class="mui-list--unstyled">
+                <li class="task">
+                    <p class="task__text task--complete">This is a task that needs to be done.</p>
+                    <button class="mui-btn mui-btn--raised btn">Delete</button>
                 </li>
-                <li>
-                    <p>This is a task that needs to be done.</p>
-                    <button>Delete</button>
+                <li class="task">
+                    <p class="task__text task--complete">This is a task that needs to be done.</p>
+                    <button class="mui-btn mui-btn--raised btn">Delete</button>
                 </li>
             </ul>
         </section>
     </main>
 </body>
+
+<script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
 
 </html>
